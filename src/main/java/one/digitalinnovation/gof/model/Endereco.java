@@ -1,7 +1,8 @@
 package one.digitalinnovation.gof.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Endereco {

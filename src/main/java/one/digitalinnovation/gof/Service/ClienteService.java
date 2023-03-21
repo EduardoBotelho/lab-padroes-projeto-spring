@@ -1,6 +1,5 @@
-package one.digitalinnovation.gof.Service.impl;
+package one.digitalinnovation.gof.Service;
 
-import jakarta.persistence.metamodel.SingularAttribute;
 import one.digitalinnovation.gof.model.Cliente;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
@@ -9,11 +8,13 @@ import java.io.Serializable;
 public interface ClienteService {
 
     Iterable<Cliente> buscarTodos();
-    Cliente buscarPorId();
+    //Cliente buscarPorId();
 
     Cliente buscarPorId(Long id);
 
-    void inserirCliente(Cliente cliente);
+
+
+    void inserir(Cliente cliente);
 
     void atualizar(Long id, Cliente cliente);
 

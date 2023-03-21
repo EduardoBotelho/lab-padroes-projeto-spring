@@ -1,12 +1,10 @@
 package one.digitalinnovation.gof.controller;
 
-import one.digitalinnovation.gof.Service.impl.ClienteService;
+import one.digitalinnovation.gof.Service.ClienteService;
 import one.digitalinnovation.gof.model.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @RestController
 @RequestMapping("clientes")
@@ -22,7 +20,7 @@ public class ClienteRestController {
 
     @PostMapping
     public ResponseEntity<Cliente> inserir(Cliente cliente) {
-        clienteService.inserirCliente(cliente);
+        clienteService.inserir(cliente);
         return ResponseEntity.ok(cliente);
     }
     @PutMapping("/{id}")
