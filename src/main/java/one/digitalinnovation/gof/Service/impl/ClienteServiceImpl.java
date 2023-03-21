@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Optional;
 
-public  class ClienteServiceImpl implements ClienteService{
+public abstract class ClienteServiceImpl implements ClienteService{
 
     @Autowired
     private ClienteRepository clienteRepository;
@@ -25,14 +25,11 @@ public  class ClienteServiceImpl implements ClienteService{
       return clienteRepository.findAll();
     }
 
-    @Override
-    public Cliente buscarPorId() {
-        return null;
-    }
 
     @Override
     public Cliente buscarPorId(Long id) {
-       Optional<Cliente> cliente = clienteRepository.findById(id);
+        // Buscar Cliente por ID.
+        Optional<Cliente> cliente = clienteRepository.findById(id);
         return cliente.get();
     }
 
